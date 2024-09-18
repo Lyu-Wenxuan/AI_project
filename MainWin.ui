@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1400</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>图片风格转换系统</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <!-- 顶部标题 -->
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="alignment">
+       <set>Qt::AlignCenter</set> <!-- 居中显示 -->
+      </property>
+      <property name="font">
+       <font>
+        <family>华文行楷</family>
+        <pointsize>36</pointsize> <!-- 增大字体 -->
+       </font>
+      </property>
+      <property name="text">
+       <string>图片风格转换系统</string>
+      </property>
+     </widget>
+    </item>
+    
+    <!-- 图像布局 -->
+    <item>
+     <layout class="QHBoxLayout" name="imageLayout">
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string>原图</string>
+        </property>
+        <layout class="QVBoxLayout" name="originalImageLayout">
+         <item>
+          <widget class="QLabel" name="orgImg">
+           <property name="minimumSize">
+            <size>
+             <width>400</width> <!-- 设置最小宽度 -->
+             <height>300</height> <!-- 设置最小高度 -->
+            </size>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set> <!-- 居中显示图片 -->
+           </property>
+           <property name="styleSheet">
+            <string>background-color: rgb(255, 255, 255);</string> <!-- 白色背景 -->
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="title">
+         <string>风格转换图</string>
+        </property>
+        <layout class="QVBoxLayout" name="convertedImageLayout">
+         <item>
+          <widget class="QLabel" name="TransImg">
+           <property name="minimumSize">
+            <size>
+             <width>400</width> <!-- 设置最小宽度 -->
+             <height>300</height> <!-- 设置最小高度 -->
+            </size>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set> <!-- 居中显示图片 -->
+           </property>
+           <property name="styleSheet">
+            <string>background-color: rgb(255, 255, 255);</string> <!-- 白色背景 -->
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <!-- 底部按钮和输入框 -->
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <!-- 图片载入按钮 -->
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>图片载入</string>
+        </property>
+        <property name="font">
+         <font>
+          <family>华文楷体</family>
+          <pointsize>20</pointsize> <!-- 调整字体大小 -->
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="imgBtn">
+        <property name="styleSheet">
+         <string>border-image: url(:/img/fileIcon2.png);</string> <!-- 添加图片图标 -->
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="placeholderText">
+         <string>请选择一张图片</string>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+
+      <!-- 风格选择 -->
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>选择风格</string>
+        </property>
+        <property name="font">
+         <font>
+          <family>华文楷体</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="2">
+       <widget class="QComboBox" name="comboBox">
+        <property name="font">
+         <font>
+          <family>Agency FB</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+
+      <!-- 风格转换按钮 -->
+      <item row="2" column="1">
+       <widget class="QPushButton" name="chageBtn">
+        <property name="text">
+         <string>风格转换</string>
+        </property>
+        <property name="font">
+         <font>
+          <family>华文楷体</family>
+          <pointsize>24</pointsize> <!-- 增大按钮字体 -->
+         </font>
+        </property>
+       </widget>
+      </item>
+
+      <!-- 保存图片按钮 -->
+      <item row="2" column="2">
+       <widget class="QPushButton" name="saveBtn">
+        <property name="text">
+         <string>保存图片</string>
+        </property>
+        <property name="font">
+         <font>
+          <family>华文楷体</family>
+          <pointsize>24</pointsize> <!-- 增大按钮字体 -->
+         </font>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+
+  <!-- 菜单栏 -->
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1400</width>
+     <height>30</height> <!-- 增加菜单栏高度 -->
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>关于</string>
+    </property>
+   </widget>
+  </widget>
+
+  <!-- 状态栏 -->
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+</ui>
